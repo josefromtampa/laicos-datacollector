@@ -1,0 +1,24 @@
+﻿<div ng-if="mode == 'edit'">
+    <h3 class="primary-text-color" ng-if="question.text" ng-bind-html="question.text"></h3>
+
+    <div class="multi-choice question-control">
+        <div ng-repeat="opt in question.type.options"
+             ng-click="!disable ? setAnswer(opt) : false">
+            <i ng-class="question.answer.value == opt.value ? 'super-ios-circle-filled ion-ios-circle-filled' : 'super-ios-circle-outline ion-ios-circle-outline'"
+               class="secondary-color"></i>
+            <label class="secondary-text-color font-med">{{opt.name}}</label>
+        </div>
+    </div>
+</div>
+<div ng-if="mode == 'review'">
+    <div class="review-question" ng-if="question.text" ng-bind-html="question.text"></div>
+
+    <div class="review-answer">
+        <span ng-if="question.type.label">
+            {{question.type.label}}:
+        </span>
+        <span class="primary-text-color bold">
+            {{question.answer.name}}
+        </span>
+    </div>
+</div>

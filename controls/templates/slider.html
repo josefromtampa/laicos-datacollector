@@ -1,0 +1,34 @@
+﻿<div ng-if="mode == 'edit'">
+    <h3 class="primary-text-color" ng-if="question.text" ng-bind-html="question.text"></h3>
+
+     <div class="question-control">
+        <div class="center-text secondary-color font-small">
+            <span ng-if="question.type.label" class="primary-text-color">{{question.type.label}}:</span> {{question.answer}}
+        </div>
+        <div class="item range range-calm" laicos-ui-touchstart="$event.stopPropagation()">
+            <i class="icon ion-ios-minus-empty super-ios-minus-empty secondary-color font-xlarge" 
+               ng-click="decrementCounter(question)" 
+               ng-disabled="disable"></i>
+            <input type="range" ng-model="question.answer" 
+                ng-min="question.type.min" 
+                ng-max="question.type.max"
+                   ng-change="changed()"
+            ng-disabled="disable"/>
+            <i class="icon ion-ios-plus-empty super-ios-plus-empty secondary-color font-xlarge"
+                ng-click="incrementCounter(question)"
+               ng-disabled="disable"></i>
+        </div>
+    </div>
+</div>
+<div ng-if="mode == 'review'">
+    <div class="review-question" ng-if="question.text" ng-bind-html="question.text"></div>
+
+    <div class="review-answer">
+        <span ng-if="question.type.label">
+            {{question.type.label}}:
+        </span>
+        <span class="primary-text-color bold">
+            {{question.answer}}
+        </span>
+    </div>
+</div>

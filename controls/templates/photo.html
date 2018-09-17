@@ -1,0 +1,31 @@
+﻿<div ng-if="mode == 'edit'">
+    <h3 class="primary-text-color" ng-if="question.text" ng-bind-html="question.text"></h3>
+
+    <div class="photo-control question-control">
+        <div class="camera-button secondary-color"
+             ng-show="!question.answer && !question.answer.localPath && !disable"
+             ng-click="actionEvent('capture', question)">
+            <i class="ion super-ios-camera"></i>
+        </div>
+        <div class="photo-content" ng-show="(question.answer && question.answer.localPath)">
+            <img id="{{'photo_' + question.id}}" ng-if="question.answer" src="{{question.answer.remotePath  ? resolveRemoteUrl(question.answer.remotePath) : question.answer.localPath}}" />
+            <div ng-hide="disable" class="photo-buttons">
+                <i class="ion super-ios-camera-outline" ng-click="actionEvent('capture', question)"></i>
+                <i class="ion super-ios-compose-outline" ng-click="actionEvent('annotate', question)"></i>
+                <i class="ion super-ios-close-outline" ng-click="clear()"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-if="mode == 'review'">
+    <div class="review-question" ng-if="question.text" ng-bind-html="question.text"></div>
+
+    <div class="review-answer">
+        <span ng-if="question.type.label">
+            {{question.type.label}}:
+        </span>
+        <span ng-if="question.answer" class="photo-control primary-text-color bold">
+            <img src="{{question.answer.remotepath ? resolveRemoteUrl(question.answer.remotePath) : question.answer.localPath}}" />
+        </span>
+    </div>
+</div>

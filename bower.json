@@ -1,0 +1,10 @@
+{
+  "name": "laicos-datacollector",
+  "version": "1.0",
+  "main": "laicos-datacollector-forms.js",
+  "ignore": [],
+  "dependencies": {
+    "mui": "~0.1.18",
+    "ionic": "~1.0.1"
+  }
+}

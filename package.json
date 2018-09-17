@@ -1,0 +1,29 @@
+{
+  "name": "laicos-datacollector",
+  "version": "1.0.0",
+  "description": "Data collection controls and functions",
+  "main": "laicos-datacollector-forms.js",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "gulpjs/gulp.git#4.0",
+    "gulp-angular-templatecache": "^1.7.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-uglify": "^1.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Laicos/laicos-datacollector.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Laicos/laicos-datacollector/issues"
+  },
+  "homepage": "https://github.com/Laicos/laicos-datacollector#readme"
+}

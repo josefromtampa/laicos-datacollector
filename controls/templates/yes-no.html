@@ -1,0 +1,22 @@
+﻿<div ng-if="mode == 'edit'">
+    <h3 class="primary-text-color" ng-if="question.text" ng-bind-html="question.text"></h3>
+
+    <div class="yes-no-control question-control">
+        <i class="green" ng-class="question.answer == 'yes' ? 'ion-ios-checkmark super-ios-checkmark' : 'ion-ios-checkmark-outline super-ios-checkmark-outline'"
+           ng-click="!disable ? setAnswer('yes') : false"></i>
+        <i class="red" ng-class="question.answer == 'no' ? 'ion-ios-close super-ios-close' : 'ion-ios-close-outline super-ios-close-outline'"
+           ng-click="!disable ? setAnswer('no') : false"></i>
+    </div>
+</div>
+<div ng-if="mode == 'review'">
+    <div class="review-question" ng-if="question.text" ng-bind-html="question.text"></div>
+
+    <div class="review-answer">
+        <span ng-if="question.type.label">
+            {{question.type.label}}:
+        </span>
+        <span class="primary-text-color bold">
+            {{question.answer}}
+        </span>
+    </div>
+</div>

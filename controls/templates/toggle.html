@@ -1,0 +1,28 @@
+﻿<div ng-if="mode == 'edit'">
+    <h3 class="primary-text-color" ng-if="question.text" ng-bind-html="question.text"></h3>
+
+    <div class="item item-toggle secondary-text-color font-med">
+        {{question.type.label || 'option ' + $index}}
+        <label class="toggle toggle-secondary">
+            <input type="checkbox" ng-model="question.answer" ng-change="changed()"
+                   ng-disabled="disable" />
+
+            <div class="track">
+                <div class="handle"></div>
+            </div>
+        </label>
+    </div>
+</div>
+<div ng-if="mode == 'review'">
+    <div class="review-question" ng-if="question.text" ng-bind-html="question.text"></div>
+
+    <div class="review-answer">
+        <span ng-if="question.type.label">
+            {{question.type.label}}:
+        </span>
+        <span class="primary-text-color bold">
+            <span ng-if="question.answer">on / available</span>
+            <span ng-if="!question.answer">off / not-available</span>
+        </span>
+    </div>
+</div>

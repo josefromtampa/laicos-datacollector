@@ -1,0 +1,21 @@
+﻿<div ng-if="mode == 'edit'">
+    <h3 class="primary-text-color" ng-if="question.text" ng-bind-html="question.text"></h3>
+
+    <div class="item item-checkbox secondary-text-color question-control font-med">
+        <label class="checkbox secondary-color-check">
+            <input type="checkbox" ng-model="question.answer"
+                   ng-change="changed()"
+                   ng-disabled="disable" />
+        </label>
+        {{question.type.label}}
+    </div>
+</div>
+<div ng-if="mode == 'review'">
+    <div class="review-question" ng-if="question.text" ng-bind-html="question.text"></div>
+
+    <div ng-if="question.answer" class="review-answer">
+        <span ng-if="question.type.label" class="primary-text-color bold">
+            {{question.type.label}}
+        </span>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+{
+  "name": "laicos-datacollector",
+  "main": "laicos-datacollector-forms.js",
+  "ignore": [],
+  "dependencies": {
+    "mui": "~0.1.18",
+    "ionic": "~1.0.1"
+  },
+  "homepage": "https://github.com/Laicos/laicos-datacollector",
+  "_release": "5f08f5976a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "5f08f5976a4aad5a0eae9bc62630532ecc0b54c8"
+  },
+  "_source": "git@github.com:Laicos/laicos-datacollector.git",
+  "_target": "*",
+  "_originalSource": "git@github.com:Laicos/laicos-datacollector.git"
+}

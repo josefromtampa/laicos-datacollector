@@ -1,0 +1,35 @@
+﻿<div ng-if="mode == 'edit'">
+    <h3 class="primary-text-color" ng-if="question.text" ng-bind-html="question.text"></h3>
+    
+    <div ng-if="question.type.label" class="counter-control-label center-text font-xsmall primary-text-color">{{question.type.label}}</div>
+
+    <div class="counter-control question-control">
+        
+        <button class="mui-btn mui-btn-primary secondary-back large circular-60"
+            ng-click="decrementCounter(question)"
+             ng-disabled="disable">
+            <i class="icon  ion-ios-minus-empty super-ios-minus-empty ion-ios-minus-empty"></i>
+        </button>
+        <input type="number" ng-model="question.answer"
+               ng-change="changed()"
+            class="mui-form-control secondary-text-color larger" 
+        ng-disabled="disable"/>
+        <button class="mui-btn mui-btn-primary secondary-back large circular-60"
+            ng-click="incrementCounter(question)"
+                ng-disabled="disable">
+            <i class="icon ion-ios-plus-empty super-ios-plus-empty"></i>
+        </button>
+    </div>
+</div>
+<div ng-if="mode == 'review'">
+    <div class="review-question" ng-if="question.text" ng-bind-html="question.text"></div>
+
+    <div class="review-answer">
+        <span ng-if="question.type.label">
+            {{question.type.label}}:
+        </span>
+        <span class="primary-text-color bold">
+            {{question.answer}}
+        </span>
+    </div>
+</div>

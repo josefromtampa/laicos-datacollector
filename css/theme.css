@@ -1,0 +1,69 @@
+﻿
+body {
+    font-family: "Open sans", Helvetica, Arial;
+}
+.primary-color {
+    color: #0d2240 !important;
+}
+.primary-back {
+    background-color: #0d2240;
+}
+.primary-text-color {
+    color: #333;
+}
+.secondary-color {
+    color: #0091b3 !important;
+}
+.secondary-back {
+    background-color: #0091b3;
+}
+.secondary-back:active,
+.secondary-back:hover,
+.secondary-back:focus {
+    background-color: #0091b3;
+}
+.secondary-text-color {
+    color: #999 !important;
+}
+.alert {
+    color: #cc0000;
+}
+.third-back {
+    background-color: #e5e5e5;
+}
+.dark-back {
+    background-color: #333;
+}
+.transparent-back {
+    background-color: transparent;
+}
+.light-text-color {
+    color: #fff;
+}
+.green {
+    color: #84db80;
+}
+.red {
+    color: #ff7e7e;
+}
+.transparent-textbox {
+
+	border: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	border-radius: 0px !important;
+	background-color: transparent !important;
+	color: #fff !important;
+	border-bottom: 2px solid rgba(255, 255, 255, .4) !important;
+    width: 100%;
+}
+
+.textbox-error {
+	border-bottom-color: red !important;
+}
+.textbox-filled {
+	border-bottom-color: #fff !important;
+}
+.textbox-highlight {
+    border-bottom-color: #0091b3 !important;
+}

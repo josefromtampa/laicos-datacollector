@@ -1,0 +1,188 @@
+﻿/* Ionic Overrides */
+input {
+    outline: none !important; /* remove outlines on active input elements */
+}
+*:not(input):not(textarea) {
+	-webkit-user-select: none; /* disable selection/Copy of UIWebView */
+	-webkit-touch-callout: none; /* disable the IOS popup when long-press on a link */
+}
+/* override ionic item list borders */
+.item {
+    border: none;
+    margin-bottom: 1px;
+}
+.item-toggle .toggle {
+    top: auto !important; /* change top position of toggle handle to auto for dynamic height */
+}
+.checkbox {
+    top: 45% !important; /* align ionic checkbox with labels */
+}
+
+/* General Styles */
+.full-size {
+	width: 100%;
+	height: 100%;
+}
+.full-width {
+    width: 100%;
+}
+.center-text {
+    width: 100%;
+    text-align: center;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.small {
+    font-size: smaller;
+}
+.med {
+    font-size: medium;
+}
+.large {
+    font-size: large;
+}
+.larger {
+    font-size: larger;
+}
+.font-xsmall {
+    font-size: 16px !important;
+}
+.font-small {
+    font-size: 18px !important;
+}
+.font-med {
+    font-size: 22px !important;
+}
+.font-large {
+    font-size: 26px !important;
+}
+.font-xlarge {
+    font-size: 32px !important;
+}
+.bold {
+    font-weight: bold;
+}
+.borders {
+    border: 1px;
+}
+.no-borders {
+    border: none !important;
+}
+.bottom-border {
+    border: 1px solid !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+.circular-60 {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.counter-control {
+    position: relative;
+    margin: 10px auto;
+    width: 70%;
+}
+    .counter-control button {
+        position: absolute;
+        margin: auto;
+        color: #fff;
+    }
+        .counter-control button:nth-of-type(1) {
+            left: 0px;
+            top: 0px;
+        }
+        .counter-control button:nth-of-type(2) {
+            right: 0px;
+            top: 0px;
+        }
+    .counter-control input {
+        width: 60%;
+        height: 60px;
+        margin: auto;
+        text-align: center !important;        
+        font-size: 28px !important;
+        border: none !important;
+    }
+    
+.counter-control-label {
+    position: relative;
+    top: 20px;
+}
+.yes-no-control {
+    position: relative;
+    width: 275px;
+    margin: auto;
+}
+    .yes-no-control i {
+        font-size: 125px;
+        margin: 15px;
+    }
+.multi-choice {
+    font-size: 30px !important;
+
+}
+    .multi-choice i {
+        font-size: 30px;
+    }
+    .multi-choice label {
+        font-weight: normal;
+        position: relative;
+        top: -3px;
+    }
+.dropdown-control {
+}
+    .dropdown-control span:nth-of-type(1) {
+        position: absolute;
+        bottom: 6px;
+        z-index: 0;
+    }
+    .dropdown-control select {
+        z-index: 2;
+        position: relative;
+    }
+
+.photo-control {
+
+}
+    .photo-control .camera-button {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 1px solid #0091b3;
+        margin: auto;
+        text-align: center;
+    }
+        .photo-control .camera-button i {
+            position: relative;
+            top: 20px;
+            font-size: 75px;
+        }
+    .photo-control img {
+        width: 100%;
+        height: auto;
+    }
+
+    .photo-control .photo-content {
+        position: relative;
+    }
+.photo-buttons {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    color: rgba(255, 255, 255, .75);
+    font-size: 36px;
+    background-color: rgba(0, 0, 0, .2);
+}

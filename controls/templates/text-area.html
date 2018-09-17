@@ -1,0 +1,25 @@
+﻿<div ng-if="mode == 'edit'">
+    <h3 class="primary-text-color" ng-if="question.text" ng-bind-html="question.text"></h3>
+
+    <div class="mui-form-group question-control">
+        <textarea class="form-textbox mui-form-control font-small"
+                  rows="{{question.type.lines}}"
+                  ng-class="{'textbox-highlight': question.answer}"
+                  ng-model="question.answer"
+                  ng-change="changed()"
+                  ng-disabled="disable"></textarea>
+        <label class="secondary-text-color">{{question.type.label}}</label>
+    </div>
+</div>
+<div ng-if="mode == 'review'">
+    <div class="review-question" ng-if="question.text" ng-bind-html="question.text"></div>
+
+    <div class="review-answer">
+        <span ng-if="question.type.label">
+            {{question.type.label}}:
+        </span>
+        <span class="primary-text-color bold">
+            {{question.answer}}
+        </span>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+﻿<div ng-if="mode == 'edit'">
+    <h3 class="primary-text-color" ng-if="question.text" ng-bind-html="question.text"></h3>
+
+    <div class="mui-form-group question-control dropdown-control">
+
+        <span ng-show="question.answer == null" class="secondary-text-color font-med">select a value</span>
+        <select ng-model="question.answer" class="secondary-color bottom-border full-width transparent-back font-large"
+                ng-options="opt.name for opt in question.type.options track by opt.value"
+                ng-change="changed()"
+                ng-disabled="disable">
+            <option disabled></option>
+        </select>
+        <label class="secondary-text-color">{{question.type.label}}</label>
+
+    </div>
+</div>
+<div ng-if="mode == 'review'">
+    <div class="review-question" ng-if="question.text" ng-bind-html="question.text"></div>
+
+    <div class="review-answer">
+        <span ng-if="question.type.label">
+            {{question.type.label}}:
+        </span>
+        <span ng-if="question.answer" class="primary-text-color bold">
+            {{question.answer.name}}
+        </span>
+    </div>
+</div>
